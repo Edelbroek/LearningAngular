@@ -1,0 +1,10 @@
+<label for="servings">Number of servings: </label>
+<span id="servings">{{ recipeService.servings() }}</span>
+<br/>
+<button 
+    (click)="recipeService.decrementServings()" 
+    [disabled]="recipeService.servings() <= 1" 
+    aria-label="Decrease servings">-</button>
+<button 
+    (click)="recipeService.incrementServings()"
+    aria-label="Increase servings">+</button>

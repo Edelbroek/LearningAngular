@@ -1,0 +1,36 @@
+<div class="container">
+    <h1>{{ title() }}</h1>
+
+    <div class="section">
+        <selected-recipe
+            [recipe]="recipeService.selectedRecipe()"
+            aria-label="Selected recipe details">
+        </selected-recipe>
+    </div>
+
+    <div class="section">
+        @if (recipeService.recipes().length > 0) {
+            <recipe-list 
+                [recipes]="recipeService.recipes()"
+                [selectedRecipe]="recipeService.selectedRecipe()"
+                (recipeSelected)="recipeService.setRecipe($event)"
+                aria-label="Recipe selection list">
+            </recipe-list>
+        } @else {
+            <p>No recipes available.</p>
+        }
+    </div>
+
+    <div class="section">
+        <servings-control
+            aria-label="Servings control">
+        </servings-control>
+    </div>
+
+    <div class="section">
+        <ingredient-list
+            [ingredients]="recipeService.ingredientList()"
+            aria-label="Ingredient list">
+        </ingredient-list>
+    </div>
+</div>

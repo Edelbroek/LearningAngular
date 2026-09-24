@@ -1,0 +1,31 @@
+.servings-control {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+label {
+  font-weight: bold;
+}
+
+button {
+  background: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 16px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin: 4px 2px;
+}
+
+button:hover {
+  background: #357ab8;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

@@ -1,0 +1,10 @@
+
+@if (recipe() != null) {
+    <div class="selected-recipe">
+        <h2>{{ recipe().name }}</h2>
+        <p>{{ recipe().description }}</p>
+        <img [src]="recipe().imageUrl" [alt]="recipe().name" class="recipe-image"/>
+    </div>
+} @else {
+    <p>No recipe selected.</p>
+}

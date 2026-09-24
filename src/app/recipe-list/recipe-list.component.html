@@ -1,0 +1,9 @@
+<h2>Recipes:</h2>
+
+@for(recipe of recipes(); track $index){
+    <button 
+        (click)="recipeSelected.emit(recipe)"
+        [class.selected]="recipe === selectedRecipe()">
+        {{ recipe.name }}
+    </button>
+}
