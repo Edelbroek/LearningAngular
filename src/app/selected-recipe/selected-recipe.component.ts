@@ -4,9 +4,9 @@ import { RecipeModel } from '../models';
 @Component({
   selector: 'selected-recipe',
   imports: [],
-  templateUrl: './selected-recipe.html',
-  styleUrl: './selected-recipe.css',
+  templateUrl: './selected-recipe.component.html',
+  styleUrl: './selected-recipe.component.css',
 })
-export class SelectedRecipe {
+export class SelectedRecipeComponent {
   readonly recipe = input.required<RecipeModel>();
 }
